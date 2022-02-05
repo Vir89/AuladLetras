@@ -1,8 +1,7 @@
 (function () {
-  const sliders = [document.querySelectorAll(".testimony_body")];
+  const sliders = [...document.querySelectorAll(".testimony_body")];
   const buttonNext = document.querySelector("#next");
   const buttonBefore = document.querySelector("#before");
-
   let value;
 
   buttonNext.addEventListener("click", () => {
@@ -19,7 +18,9 @@
     value = Number(currentTestimony);
     value += add;
 
-    sliders[Number(currentTestimony) - 1].classList.remove("");
+    sliders[Number(currentTestimony) - 1].classList.remove(
+      "testimony_body--show"
+    );
     if (value === sliders.length + 1 || value === 0) {
       value = value === 0 ? sliders.length : 1;
     }
