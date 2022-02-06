@@ -1,10 +1,10 @@
 (function () {
-  const openButton = document.querySelectorAll(".nav_menu");
+  const openButton = document.querySelector(".nav_menu");
   const menu = document.querySelector(".nav_link");
   const closeMenu = document.querySelector(".nav_close");
 
   openButton.addEvenListener("click", () => {
-    menu.classList.add("nav_link..show");
+    menu.classList.add("nav_link--show");
   });
 
   closeMenu.addEventListener("click", () => {
